@@ -83,7 +83,10 @@ class VISUALTAIWAN:
             locations="val",
             color=keyword,
             scope="asia",
+#             若要多張圖對比得固定單一數值
             range_color=(0, 22),
+#         若單張圖顏色範圍可設定0~前90%
+#             range_color = (0, int(data[keyword].quantile(0.9)))
         )
         fig.update_geos(fitbounds="locations", visible=False)
         fig.show()
